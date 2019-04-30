@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "express-now",
+  "name": "jose-mourinho-quotes-api",
   "builds": [
     {
       "src": "app.js",
