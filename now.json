@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "express-now",
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+      },
+      "src": "/.*",
+      "dest": "/app.js"
+    }
+  ]
+}
