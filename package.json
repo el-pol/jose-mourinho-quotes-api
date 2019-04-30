@@ -2,16 +2,16 @@
   "name": "jose-mourinho-quotes-api",
   "version": "1.0.0",
   "description": "REST API endpoint for Jose Mourinho quotes",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "micro src",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "micro": "^9.3.3",
-    "microrouter": "^3.1.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
     "nodemon": "^1.18.11"
   }
 }
