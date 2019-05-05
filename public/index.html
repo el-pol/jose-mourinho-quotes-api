@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Pol Milian">
+  <meta name="description" content="The best Jose Mourinho (The Special One) random quotes generator on the Internet.">
+  <title>Jose Mourinho Random Quotes Generator</title>
+  <link type="text/css" rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <main>
+    <button id="getquote" type="button">Get a new quote!</button>
+    <section id="bubble">
+      <p id="result">Ready for some Jose Mourinho wisdom?</p>
+    </section>
+    <div id="avatar"></div>
+
+
+  </main>
+  <footer>
+    <p><a href="https://github.com/Polcius/jose-mourinho-quotes-api" rel="noopener noreferrer">👉Check out the API👈</a>
+    </p>
+    <p><a href="mailto:pol.milian.dev@gmail.com" rel="noopener noreferrer">by Pol Milian</a></p>
+  </footer>
+  <script>
+
+
+
+    document.getElementById('getquote').addEventListener('click', getData)
+
+    async function getData() {
+      let response = await fetch("https://jose-mourinho-quotes-api.polcius.now.sh/quote");
+      let data = await response.text();
+      changeAvatar();
+      return document.getElementById('result').innerText = `"${data}"`;
+    }
+
+    function changeAvatar() {
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+      }
+      const imageArray = ["images/jose_1.jpg", "images/jose_2.jpg", "images/jose_3.jpg", "images/jose_4.jpg", "images/jose_5.jpg", "images/jose_6.jpg", "images/jose_7.jpg", "images/jose_8.jpg"];
+      const randomImage = imageArray[getRandomInt(imageArray.length)];
+      document.getElementById('avatar').style.backgroundImage = `url("${randomImage}")`
+    }
+
+  </script>
+</body>
+
+</html>

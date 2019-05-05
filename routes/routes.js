@@ -2,7 +2,7 @@ var quotes = require('../data/quotes.json')
 
 var appRouter = function (app) {
   app.get("/", function(req, res) {
-    res.status(200).send("Welcome to Jose Mourinho Quotes API. Please visit /quote to get a random quote");
+    res.status(200).sendFile('index.html');
   });
 
   function getRandomInt(max) {

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Muli|Roboto');
+
+:root {
+  --green: #00C008;
+  --black: #363636;
+  --grey: #8A8A8A;
+  --mainFont: 'Roboto', sans-serif;
+  --bubbleFont: 'Muli', sans-serif;
+
+}
+
+
+main, footer {
+  font-family: var(--mainFont);
+  font-size: 1.5rem;
+  max-width: 38rem;
+  padding: 2rem;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main > * {
+  margin: auto;
+}
+
+button {
+  background: var(--green);
+  border-radius: 100px;
+  color: white;
+  width: 20rem;
+  height: 5rem;
+  border: 0;
+  display: block;
+  font-size: inherit;
+  font-weight: bold;
+  margin-bottom: 5rem;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  transition: all .15s ease;
+}
+
+@media (max-width: 425px) {
+  button {
+    width: 15rem;
+  }
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  background: #02d70b;
+}
+
+
+#bubble {
+  display: block;
+  max-width: 700px;
+  position: relative;
+  box-shadow: -20px 0 #333, 0 -20px #333, 20px 0 #333, 0 20px #333, -10px -10px #333, -10px 10px #333, 10px 10px #333, 10px -10px #333, 10px 30px 20px rgba(51, 51, 51, 0.7);
+  margin-bottom: 6rem;
+}  
+#bubble::before {
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    margin-left: -10px;
+    box-shadow:
+      -10px 0 #333,
+      0 10px #333,
+      -10px 10px #333;
+  }
+ 
+  
+#bubble::after {
+    content: ' ';
+    width: 10px;
+    height: 50px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    box-shadow:
+      9px -10px #fff,
+      18px -20px #fff,
+      0 10px #333,
+      10px 0 #333,
+      20px -10px #333,
+      30px -20px #333,
+      -10px 0 #333;
+  }
+
+  #bubble > p {
+    color: var(--black);
+    line-height: 30px;
+    font-family: var(--bubbleFont);
+    padding: 20px;
+    background: #fff;
+    margin: 0;
+    position: relative;
+    perspective: 100px;
+    z-index: 10;
+    perspective-origin: 50% 50%;
+    box-shadow: 
+      -10px 0 #fff,
+      0 -10px #fff,
+      10px 0 #fff,
+      0 10px #fff;
+  }
+  
+  #avatar {
+    background-image: url('images/jose_1.jpg');
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: top center;
+    border-radius: 50%;
+}
+
+footer {
+  margin: auto;
+  text-align: center;
+}
+
+footer > p:nth-of-type(1) {
+  font-size: 1.1rem;
+  line-height: 21px;
+}
+
+footer > p:nth-of-type(2) {
+  color: var(--grey);
+  font-size: 1rem;
+  line-height: 19px;
+}
+
+
+
+/* Bubble styles thanks to https://codepen.io/jkobilka/pen/pLQgdz   */
