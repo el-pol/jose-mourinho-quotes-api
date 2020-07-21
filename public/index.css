@@ -12,7 +12,7 @@
 
 main, footer {
   font-family: var(--mainFont);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   max-width: 38rem;
   padding: 2rem;
   margin: auto;
@@ -37,7 +37,7 @@ button {
   display: block;
   font-size: inherit;
   font-weight: bold;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
   transition: all .15s ease;
 }
@@ -118,8 +118,8 @@ button:hover {
   
   #avatar {
     background-image: url('images/jose_1.jpg');
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
     background-size: cover;
     background-position: top center;
     border-radius: 50%;
